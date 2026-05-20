@@ -216,6 +216,7 @@ tbody tr:hover {
   height: 100vh;
   z-index: 60;
   transition: transform 0.3s ease;
+  background-color: var(--color-bg) !important;
 }
 
 @media (max-width: 767px) {

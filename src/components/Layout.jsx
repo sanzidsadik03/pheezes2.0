@@ -9,11 +9,11 @@ const Layout = () => {
   return (
     <div className="flex h-screen w-full" style={{ overflow: 'hidden' }}>
       {/* Mobile Topbar */}
-      <div className="flex items-center justify-between p-4 glass-card md:hidden" style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 50, borderRadius: 0, borderBottom: '1px solid var(--color-border)' }}>
-        <h2 className="m-0" style={{ fontSize: '1.2rem', color: 'var(--color-primary)' }}>Pheezes v2.0</h2>
-        <button onClick={() => setMobileMenuOpen(prev => !prev)} style={{ zIndex: 60, position: 'relative' }}>
+      <div className="flex items-center p-4 glass-card md:hidden" style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 50, borderRadius: 0, borderBottom: '1px solid var(--color-border)', gap: '1rem' }}>
+        <button onClick={() => setMobileMenuOpen(prev => !prev)} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
           <Menu color="var(--color-text)" />
         </button>
+        <h2 className="m-0" style={{ fontSize: '1.2rem', color: 'var(--color-primary)' }}>Pheezes v2.0</h2>
       </div>
 
       <Sidebar mobileMenuOpen={mobileMenuOpen} setMobileMenuOpen={setMobileMenuOpen} />
